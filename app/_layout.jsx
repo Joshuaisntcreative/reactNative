@@ -1,9 +1,13 @@
 import { StyleSheet, Text, useColorScheme, View } from 'react-native'
 import { Slot, Stack } from 'expo-router'
-import { Colors } from "../constants/Colors.js"
+import { colours } from "../constants/Colors.jsx";
+
+
 const RootLayout = () => {
-  const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light
+
+
+  const colorScheme = useColorScheme(); 
+  const theme = colours[colorScheme] ?? colours.light
 
 
   return (
