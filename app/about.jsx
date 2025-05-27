@@ -1,14 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View , useColorScheme} from 'react-native'
 import { Link } from 'expo-router'
+import { colours } from "../constants/Colors.jsx";
 
 const About = () => {
+  
+  //initalizes the light and dark mode in ColorScheme and uses it in the const theme
+  const colorScheme = useColorScheme(); 
+  const theme = colours[colorScheme] ?? colours.light
+
+
   return (
-    <View style = {styles.container}>
+    <View style = {[styles.container, {backgroundColor: theme.background}] }>
       <Text style = {styles.title}>About</Text>
-
-
-
+      
       <Link  href = "/" style = {styles.link}>Back Home</Link>
     </View>
   )

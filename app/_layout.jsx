@@ -1,5 +1,5 @@
-import { StyleSheet, Text, useColorScheme, View } from 'react-native'
-import { Slot, Stack } from 'expo-router'
+import { StyleSheet,useColorScheme} from 'react-native'
+import {Stack } from 'expo-router'
 import { colours } from "../constants/Colors.jsx";
 
 
@@ -11,6 +11,7 @@ const RootLayout = () => {
 
 
   return (
+    <>
       <Stack screenOptions={
         {
       
@@ -23,6 +24,8 @@ const RootLayout = () => {
         <Stack.Screen name ="contact"  options = {{ title: 'Contact'}}/>
 
       </Stack>
+    </>
+
   )
 }
 
