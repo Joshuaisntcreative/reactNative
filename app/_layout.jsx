@@ -1,4 +1,4 @@
-import { StyleSheet,useColorScheme} from 'react-native'
+import { StatusBar, StyleSheet,useColorScheme} from 'react-native'
 import {Stack } from 'expo-router'
 import { colours } from "../constants/Colors.jsx";
 
@@ -12,6 +12,7 @@ const RootLayout = () => {
 
   return (
     <>
+      <StatusBar value = 'auto'/>
       <Stack screenOptions={
         {
       

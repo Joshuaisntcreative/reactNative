@@ -1,6 +1,8 @@
 import { StyleSheet, Text} from 'react-native'
 import {Link } from 'expo-router'
 import ThemedView from '../components/ThemedView'
+import Spacer from '../components/Spacer'
+import ThemedText from '../components/ThemedText'
 
 
 
@@ -8,17 +10,20 @@ import ThemedView from '../components/ThemedView'
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
+      
+    <ThemedText style = {styles.title} title = {true}>The Number 1</ThemedText>
+    {/* a component that spaces things more easily */}
+    <Spacer height = {20}/>
+
+    <ThemedText style = {styles.title}>Reading List App</ThemedText>
 
 
-      <Text style = {{marginTop : 10, marginBottom: 30}}>The number 1</Text>
-
-
-      <Text style = {styles.title}>
-        Reading List App
-        </Text>
-
-        <Link href = "/about" style = {styles.link}> About Page</Link>
-        <Link href = "/contact" style = {styles.link}> Contact Page</Link>
+        <Link href = "/about" style = {styles.link}>
+        <ThemedText>About Page</ThemedText>
+        </Link>
+        <Link href = "/contact" style = {styles.link}>
+        <ThemedText>Contact Page</ThemedText>
+        </Link>
 
     </ThemedView>
   )
