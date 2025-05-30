@@ -18,15 +18,15 @@ const Home = () => {
     <ThemedText style = {styles.title}>Reading List App</ThemedText>
 
 
-        <Link href = "/login" style = {styles.link}>
+        <Link href = "/login" style = {styles.link} push>
         <ThemedText>Login Page</ThemedText>
         </Link>
-        <Link href = "/register" style = {styles.link}>
+        <Link href = "/register" style = {styles.link} push>
         <ThemedText>Register Page</ThemedText>
         </Link>
 
 
-        <Link href = "/profile" style = {styles.link}>
+        <Link href = "/profile" style = {styles.link} push>
         <ThemedText>Profile Page</ThemedText>
         </Link>
 
